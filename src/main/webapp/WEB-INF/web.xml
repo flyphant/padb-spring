@@ -6,6 +6,20 @@
     http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
   <display-name>Archetype Created Web Application</display-name>
   <servlet>
+  	<servlet-name>padbmvc</servlet-name>
+  	<servlet-class>cn.iq99.servlet.PadbDispatcherServlet</servlet-class>
+  	<init-param>
+  		<param-name>contextConfigLocation</param-name>
+  		<param-value>application.propertites</param-value>
+  	</init-param>
+  	<load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>padbmvc</servlet-name>
+  	<url-pattern>/*</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
   	<description></description>
   	<display-name>UserServlet</display-name>
   	<servlet-name>UserServlet</servlet-name>
